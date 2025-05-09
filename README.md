@@ -8,6 +8,7 @@ Este es un proyecto de práctica donde implementé un CRUD utilizando **Redux To
 - 🎨 Interfaz construida con **Tremor**, una librería de componentes enfocada en dashboards y visualización.
 - 📝 Funcionalidad CRUD completa: crear, leer, actualizar y eliminar usuarios (o ítems).
 - 🔄 Arquitectura basada en slices y store centralizado con buenas prácticas.
+- 💾 Constancia de datos en el Local Storage
 
 ## 📚 Basado en el curso de Midudev
 
@@ -18,6 +19,7 @@ Este proyecto está basado en un ejercicio propuesto por **[@midudev](https://gi
 - [React](https://reactjs.org/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 - [Tremor](https://www.tremor.so/)
+- [Sonner](https://sonner.emilkowal.ski/)
 - [Vite](https://vitejs.dev/) (para el entorno de desarrollo)
 
 ## 📦 Instalación
