@@ -30,12 +30,12 @@ const persistanceLocalStorageMiddleware: Middleware = (store) => (next) => (acti
 } 
 
    const syncWithDatabaseMiddleware: Middleware = (store) => (next) => (action: Action) => {
-    //fase 1: state antes de ser actualizado por el reducer
-     const { type, payload } = action as DeleteUserByIdAction //Linea a tipar correctamente
+     //fase 1: state antes de ser actualizado por el reducer
      const previousState = store.getState()
      
-    next(action)
-    //fase 2: state luego de ser actualizado por el reducer
+     next(action)
+     //fase 2: state luego de ser actualizado por el reducer
+     const { type, payload } = action as DeleteUserByIdAction //Linea a tipar correctamente
      if (type === 'users/deleteUserById') { // <-- Accion de Eliminar usuario
        const userIdToRemove = payload
        const userToRemove = previousState.users.find((user: UserWithId) => user.id === userIdToRemove)
