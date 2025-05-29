@@ -8,7 +8,7 @@ interface Props{
   closeModal: () => void
 }
 
-export const EditUserDialog: React.FC<Props> = ({ closeModal, id }) => { 
+export const EditUserDialog: React.FC<Props> = ({id ,closeModal}) => { 
   const { editUser } = useUserActions()
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => { 
@@ -26,7 +26,7 @@ export const EditUserDialog: React.FC<Props> = ({ closeModal, id }) => {
 
   return (
     <section onClick={closeModal} className='fixed inset-0 backdrop-blur flex justify-center items-center z-10'>
-      <Card onClick={(event) => event.stopPropagation()} className='max-w-[380px] p-10'>
+      <Card id='edit-user-modal' onClick={(event) => event.stopPropagation()} className='max-w-[380px] p-10'>
         <form onSubmit={handleSubmit} className='rounded-2xl flex flex-col gap-y-4'>
           <Title>
             Usuario a editar: <Badge color='violet' className='rounded-full' >{id}</Badge>
