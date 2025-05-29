@@ -52,13 +52,15 @@ export function ListOfUsers() {
                 {user.name}
               </TableCell>
               <TableCell>{user.email}</TableCell>
-              <TableCell className='flex justify-center gap-x-2'> 
-                <button onClick={() => openModal({id: user.id})} className='cursor-pointer'>
-                  <EditIcon />
-                </button>
-                <button className='cursor-pointer' onClick={() => removeUser(user.id) }>
-                  <DeleteIcon />
-                </button>
+              <TableCell> 
+                <div className='flex justify-center items-center gap-x-2'>
+                  <button onClick={() => openModal({id: user.id})} className='cursor-pointer'>
+                    <EditIcon />
+                  </button>
+                  <button className='cursor-pointer' onClick={() => removeUser(user.id) }>
+                    <DeleteIcon />
+                  </button>
+                </div>
               </TableCell>
             </TableRow>
           ))}
@@ -66,7 +68,7 @@ export function ListOfUsers() {
       </Table>
           {
             openDialog && userIdToEdit && (
-              <EditUserDialog closeModal={closeModal} id={userIdToEdit} />
+          <EditUserDialog closeModal={closeModal} id={userIdToEdit} />
             )
           }
     </Card>
